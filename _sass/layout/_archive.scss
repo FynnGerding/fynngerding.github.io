@@ -34,7 +34,7 @@
   color: var(--global-text-color-light);
   border-bottom: 1px solid var(--global-border-color);
 
-  + .list__item .archive__item-title {
+  +.list__item .archive__item-title {
     margin-top: 0.5em;
   }
 }
@@ -43,7 +43,7 @@
   margin-bottom: 0.25em;
   font-family: $sans-serif-narrow;
 
-  a + a {
+  a+a {
     opacity: 0.5;
   }
 }
@@ -61,7 +61,7 @@
   margin-top: 0;
   font-size: $type-size-6;
 
-  & + p {
+  &+p {
     text-indent: 0;
   }
 }
@@ -69,6 +69,7 @@
 .archive__item-teaser {
   border-radius: $border-radius;
   overflow: hidden;
+
   img {
     width: 100%;
   }
@@ -112,41 +113,163 @@
    Grid view
    ========================================================================== */
 
-.grid__item {
-  margin-bottom: 2em;
+.grid__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2em;
 
-  .page__meta {
-    margin: 0 0 4px;
+  @include breakpoint($medium) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include breakpoint($large) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid__item {
+  margin-bottom: 0;
+  width: 100%;
+  float: none;
+
+  .archive__item {
+    height: 100%;
+    border: 1px solid var(--global-border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: var(--global-card-bg-color);
+    box-shadow: var(--global-card-shadow);
+    /* Added shadow */
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* Necessary for stretched link */
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      /* Slightly stronger hover shadow */
+      border-color: var(--global-link-color);
+    }
+  }
+
+  .archive__item-teaser {
+    max-height: 200px;
+    overflow: hidden;
+    border-bottom: none;
+    border-radius: 0;
+    /* Override default radius to ensure full span */
+    margin: 0;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+      border-radius: 0;
+    }
+  }
+
+  /* Remove specific teaser hover effect since whole card animates */
+  .archive__item:hover .archive__item-teaser {
+    box-shadow: none;
+
+    img {
+      transform: scale(1.05);
+    }
   }
 
   .archive__item-title {
-    margin-top: 0.5em;
+    margin: 1.5rem 1.5rem 0.5rem;
+    /* Increased margins */
     font-size: $type-size-5;
+    font-weight: 700;
+
+    /* Stretched link on the title anchor */
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+    }
+
+    /* Raise permalink icon if present */
+    a+a {
+      opacity: 1;
+      position: relative;
+      z-index: 2;
+    }
   }
 
   .archive__item-excerpt {
-    display: none;
-  }
+    margin: 0 1.5rem 1.5rem;
+    /* Consistent side margins */
+    font-size: $type-size-6;
+    flex-grow: 1;
+    display: block;
 
-  @include breakpoint($small) {
-    @include gallery(5 of 10);
-    .archive__item-teaser {
-      max-height: 200px;
+    /* Raise links in excerpt */
+    a {
+      position: relative;
+      z-index: 2;
     }
   }
 
-  @include breakpoint($medium) {
-    margin-left: 0; /* reset before mixin does its thing*/
-    margin-right: 0; /* reset before mixin does its thing*/
-    @include gallery(2.5 of 10);
+  .page__meta {
+    margin: 0 1.5rem 0.5rem;
+    font-size: 0.8em;
+  }
 
-    .archive__item-teaser {
-      max-height: 120px;
+  /* Raise other links in the card (like downloads) */
+  .archive__item p a {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Ensure generic paragraphs also align if present */
+  .archive__item>p {
+    margin: 0 1.5rem 1.5rem;
+  }
+
+  /* Bottom links row */
+  .archive__item-links {
+    margin: 0 1.5rem 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--global-border-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 2;
+    /* Ensure clickable above stretched link */
+
+    a {
+      font-size: 0.9em;
+      text-decoration: none;
+      color: var(--global-text-color);
+      display: flex;
+      align-items: center;
+      gap: 0.3em;
+
+      &:hover {
+        color: var(--global-link-color);
+      }
     }
 
-    .archive__item-excerpt {
-      display: block;
-      font-size: $type-size-6;
+    .archive__item-icons {
+      margin-left: auto;
+      display: flex;
+      gap: 1rem;
     }
   }
 }

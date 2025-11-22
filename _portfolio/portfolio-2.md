@@ -1,10 +1,9 @@
 ---
-title: "Example Project"
-excerpt: "Short description of portfolio item number 1"
+title: "Example Project 2"
+excerpt: "Short description of portfolio item number 2"
 header:
   image: "500x300.png"
   teaser: "500x300.png"
-project_url: "https://example.com"
 code_url: "https://github.com/example/project"
 pdf_url: "https://example.com/paper.pdf"
 collection: portfolio
