@@ -16,8 +16,12 @@
   <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
     {% if include.type == "grid" and teaser %}
     <div class="archive__item-teaser">
-      <img src={% if teaser contains "://" %} "{{ teaser }}" {% else %} "{{ teaser | prepend: " /images/" | prepend:
-        base_path }}" {% endif %} alt="">
+      {% if teaser contains "://" %}
+      {% capture teaser_url %}{{ teaser }}{% endcapture %}
+      {% else %}
+      {% capture teaser_url %}{{ teaser | prepend: "/images/" | prepend: base_path }}{% endcapture %}
+      {% endif %}
+      <img src="{{ teaser_url }}" alt="">
     </div>
     {% endif %}
 
