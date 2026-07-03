@@ -26,9 +26,9 @@ author:
   avatar           : "fynn_gerding.png"
   name             : "Fynn Gerding"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Nijmegen, The Netherlands"
-  employer         : "Radboud University"
+  bio              : "PhD researcher studying information, structure, and efficiency in neural networks."
+  location         : "Graz, Austria"
+  employer         : "TU Graz"
   uri              : # URL
   email            : "fynn.gerding@gmail.com" 
 
