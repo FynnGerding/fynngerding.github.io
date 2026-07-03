@@ -7,4 +7,4 @@ redirect_from:
   - /about.html
 ---
 
-I am interested in how learning systems turn data into knowledge. I study how intelligent systems learn from data: what they retain, what they discard, and which assumptions allow reliable behavior to emerge under uncertainty. My work sits between **machine learning** and **information theory**, asking how patterns become structure, how correlation becomes mechanism, and how complex models can learn more robustly and efficiently. At its core, it is an attempt to understand what really matters in intelligent systems. 
+I am a PhD researcher at **TU Graz**, working on **information-theoretic analyses of neural networks**. My research asks how deep learning models use, compress, and preserve information: what they retain, what they discard, and how redundancy, synergy, and structure shape generalization. I am especially interested in mutual information, partial information decomposition, and their role in understanding different neural network architectures. More broadly, my work sits between **machine learning** and **information theory**, with the goal of making deep learning more interpretable, robust, and resource-efficient.
