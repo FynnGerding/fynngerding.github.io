@@ -14,8 +14,8 @@ I am a PhD researcher at **TU Graz**, working on **information-theoretic analyse
     <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/TU_Graz.svg" alt="TU Graz logo" height="60" referrerpolicy="no-referrer">
     <span class="affiliation__label">PhD researcher at the Signal Processing and Speech Communication Lab, TU Graz</span>
   </a>
-  <a class="affiliation affiliation--dark" href="https://ellis.eu/student/2026-fynn-gerding" target="_blank" rel="noopener">
-    <img src="https://ellis.eu/assets/logos/ellis_logo.png" alt="ELLIS logo" height="60" referrerpolicy="no-referrer">
+  <a class="affiliation" href="https://ellis.eu/student/2026-fynn-gerding" target="_blank" rel="noopener">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Logo_of_ELLIS.png" alt="ELLIS logo" height="60" referrerpolicy="no-referrer">
     <span class="affiliation__label">ELLIS PhD student</span>
   </a>
   <a class="affiliation" href="https://www.fwf.ac.at/en/research-radar/10.55776/PAT7753623" target="_blank" rel="noopener">

@@ -13,7 +13,7 @@
   }
 }
 
-/* Cards take the background their logo is designed for, in light and dark mode alike */
+/* Cards stay white in light and dark mode alike, matching the logos */
 .affiliation {
   display: flex;
   flex-direction: column;
@@ -51,18 +51,6 @@
 .page__content .affiliation:hover img,
 .page__content .affiliation:focus img {
   box-shadow: none;
-}
-
-/* For logos drawn in white, made for dark backgrounds */
-.affiliation--dark {
-  background-color: #1f2328;
-
-  &,
-  &:hover,
-  &:focus,
-  &:visited {
-    color: #eaeef2;
-  }
 }
 
 .affiliation__label {
