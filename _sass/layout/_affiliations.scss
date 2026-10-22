@@ -13,6 +13,7 @@
   }
 }
 
+/* Cards take the background their logo is designed for, in light and dark mode alike */
 .affiliation {
   display: flex;
   flex-direction: column;
@@ -20,33 +21,41 @@
   padding: 1em;
   border: 1px solid var(--global-border-color);
   border-radius: 8px;
-  background-color: var(--global-card-bg-color);
-  color: var(--global-text-color);
+  background-color: #fff;
+  color: #3d4144;
   text-align: center;
   text-decoration: none;
   transition: box-shadow 0.2s, transform 0.2s;
 
   &:hover,
-  &:focus {
-    box-shadow: var(--global-card-shadow);
-    transform: translateY(-2px);
-    color: var(--global-text-color);
+  &:focus,
+  &:visited {
+    color: #3d4144;
     text-decoration: none;
   }
 
-  /* Logos keep a white backing so they stay legible in dark mode */
+  &:hover,
+  &:focus {
+    box-shadow: var(--global-card-shadow);
+    transform: translateY(-2px);
+  }
+
   img {
     height: 60px;
     width: 100%;
     object-fit: contain;
-    padding: 0.4em;
-    background-color: #fff;
-    border-radius: 4px;
   }
+}
 
-  /* For logos drawn in white, made for dark backgrounds */
-  img.affiliation__logo--dark {
-    background-color: #1f2328;
+/* For logos drawn in white, made for dark backgrounds */
+.affiliation--dark {
+  background-color: #1f2328;
+
+  &,
+  &:hover,
+  &:focus,
+  &:visited {
+    color: #eaeef2;
   }
 }
 
