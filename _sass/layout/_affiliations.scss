@@ -47,6 +47,12 @@
   }
 }
 
+/* The theme shadows images inside hovered links; keep logos flush with their card */
+.page__content .affiliation:hover img,
+.page__content .affiliation:focus img {
+  box-shadow: none;
+}
+
 /* For logos drawn in white, made for dark backgrounds */
 .affiliation--dark {
   background-color: #1f2328;
