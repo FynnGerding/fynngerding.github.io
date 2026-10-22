@@ -16,7 +16,7 @@ I am a PhD researcher at **TU Graz**, working on **information-theoretic analyse
   </a>
   <a class="affiliation" href="https://ellis.eu/student/2026-fynn-gerding" target="_blank" rel="noopener">
     <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Logo_of_ELLIS.png" alt="ELLIS logo" height="60" referrerpolicy="no-referrer">
-    <span class="affiliation__label">ELLIS PhD student</span>
+    <span class="affiliation__label">ELLIS PhD student<br>Primary advisor: Bernhard Geiger (Know Center Research GmbH)<br>Exchange advisor: Giuseppe Durisi (Chalmers University of Technology)</span>
   </a>
   <a class="affiliation" href="https://www.fwf.ac.at/en/research-radar/10.55776/PAT7753623" target="_blank" rel="noopener">
     <img src="https://www.fwf.ac.at/fileadmin/Website/Logos/FWF_Logo_Zusatz_Dunkelblau_RGB_EN.svg" alt="FWF Austrian Science Fund logo" height="60" referrerpolicy="no-referrer">

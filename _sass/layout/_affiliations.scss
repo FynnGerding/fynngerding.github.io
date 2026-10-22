@@ -47,6 +47,15 @@
   }
 }
 
+/* The theme underlines every link in page content; cards are links without underlines */
+.page__content a.affiliation {
+  &,
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
 /* The theme shadows images inside hovered links; keep logos flush with their card */
 .page__content .affiliation:hover img,
 .page__content .affiliation:focus img {
