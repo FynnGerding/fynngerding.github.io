@@ -43,6 +43,11 @@
     background-color: #fff;
     border-radius: 4px;
   }
+
+  /* For logos drawn in white, made for dark backgrounds */
+  img.affiliation__logo--dark {
+    background-color: #1f2328;
+  }
 }
 
 .affiliation__label {
