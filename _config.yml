@@ -293,6 +293,11 @@ defaults:
       layout: talk
       author_profile: true
       share: true
+  # Google Search Console verification file
+  - scope:
+      path: "google51b3e929286a1f84.html"
+    values:
+      sitemap: false
 
 
 # Sass/SCSS
