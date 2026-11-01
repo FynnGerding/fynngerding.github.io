@@ -24,3 +24,16 @@ I am a PhD researcher at **TU Graz**, working on **information-theoretic analyse
     <span class="affiliation__label">Working on the FWF project <em>Information Planes and Decompositions</em></span>
   </a>
 </div>
+
+## News
+
+<ul class="news-list">
+{%- for post in site.posts limit: 5 %}
+  <li class="news-list__item">
+    <time class="news-list__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %Y" }}</time>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+  </li>
+{%- endfor %}
+</ul>
+
+<p class="news-list__more"><a href="{{ '/news/' | relative_url }}">All news →</a></p>
