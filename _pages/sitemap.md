@@ -11,7 +11,7 @@ A list of all the posts and pages found on the site. For you robots out there, t
 
 <h2>Pages</h2>
 {% for post in site.pages %}
-  {% if post.sitemap == false or post.redirect_to %}{% continue %}{% endif %}
+  {% if post.sitemap == false or post.redirect_to or post.title == nil %}{% continue %}{% endif %}
   {% include archive-single.html %}
 {% endfor %}
 
