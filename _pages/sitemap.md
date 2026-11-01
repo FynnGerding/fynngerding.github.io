@@ -11,20 +11,23 @@ A list of all the posts and pages found on the site. For you robots out there, t
 
 <h2>Pages</h2>
 {% for post in site.pages %}
+  {% if post.sitemap == false or post.redirect_to %}{% continue %}{% endif %}
   {% include archive-single.html %}
 {% endfor %}
 
+{% if site.posts.size > 0 %}
 <h2>Posts</h2>
 {% for post in site.posts %}
   {% include archive-single.html %}
 {% endfor %}
+{% endif %}
 
 {% capture written_label %}'None'{% endcapture %}
 
 {% for collection in site.collections %}
 {% unless collection.output == false or collection.label == "posts" %}
   {% capture label %}{{ collection.label }}{% endcapture %}
-  {% if label != written_label %}
+  {% if label != written_label and collection.docs.size > 0 %}
   <h2>{{ label }}</h2>
   {% capture written_label %}{{ label }}{% endcapture %}
   {% endif %}
