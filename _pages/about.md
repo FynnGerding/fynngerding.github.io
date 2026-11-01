@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "Hey there, I'm Fynn!"
+seo_title: "Fynn Gerding"
 author_profile: true
 redirect_from: 
   - /about/
